@@ -40,26 +40,21 @@ body {
 }
 
 #landing {
-	background-image: url('../images/landing-small-faded.png');
+	/*background-image: url('../images/landing-small-faded.png');*/
+	background-image: url('../images/landing-faded.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
 }
 
 @media (min-width: 576px) {
-		#landing {
-		background-image: url('../images/landing-faded.png');
-		background-size: cover;
-		background-repeat: no-repeat;
+	#landing {
 		background-position: center center;
 	}
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
 #landing {
-	background-image: url('../images/landing-faded.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 	background-position: center bottom;
 }
 
