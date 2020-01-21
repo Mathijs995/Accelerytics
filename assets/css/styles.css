@@ -1,4 +1,89 @@
 body {
-  font-family: Lato, sans-serif;
+  font-family: Roboto, Lato, sans-serif;
   font-weight: 400;
+  color: #252422;
+  overscroll-behavior: none;
 }
+
+.bf {
+	font-family: Roboto Condensed;
+}
+
+.btn-action {
+	background-color: #EB5E28;
+	color: #FFFCF2;
+}
+
+.bg-dark {
+	background-color: #252422;
+	color: #FFFCF2;
+}
+
+.card-header {
+	/*background-color: #403D39;
+	color: #FFFCF2;*/
+	background-color: inherit;
+	border-top: none;
+}
+
+.card {
+	border: 1px solid #403D39;
+}
+
+.card-footer {
+	background-color: inherit;
+	border-top: none;
+}
+
+.blockquote-footer {
+	color: #CCC5B9;
+}
+
+#landing {
+	background-image: url('../images/landing-small-faded.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+@media (min-width: 576px) {
+		#landing {
+		background-image: url('../images/landing-faded.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+#landing {
+	background-image: url('../images/landing-faded.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+/*
+	White
+	#FFFCF2
+*/
+
+/*
+	Light grey
+	#CCC5B9
+*/
+
+/*
+	Dark grey
+	#403D39
+*/
+
+/*
+	Black
+	#252422
+*/
+
+/*
+	Orange
+	#EB5E28
+*/
