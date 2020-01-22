@@ -1,22 +1,46 @@
+@font-face {
+  font-family: 'Futura medium bt';
+  src: url('../fonts/futura/futura medium bt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Futura light bt';
+  src: url('../fonts/futura/Futura Light bt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Futura book font';
+  src: url('../fonts/futura/Futura Book font.ttf') format('truetype');
+}
+
 body {
-  font-family: Roboto, Lato, sans-serif;
+  font-family: Futura light bt, Roboto, Lato, sans-serif;
   font-weight: 400;
-  color: #252422;
+  /*color: #252422;*/
+  color: black;
   overscroll-behavior: none;
 }
 
 .bf {
-	font-family: Roboto Condensed;
+	font-family: Futura medium bt;
+}
+
+.action-link {
+	color: orange;
 }
 
 .btn-action {
-	background-color: #EB5E28;
-	color: #FFFCF2;
+	/*background-color: #EB5E28;*/
+	background-color: orange;
+	/*color: #FFFCF2;*/
+	color: white;
 }
 
 .bg-dark {
-	background-color: #252422;
-	color: #FFFCF2;
+	/*background-color: #252422;*/
+	background-color: black !important;
+	/*color: #FFFCF2;*/
+	color: white !important;
 }
 
 .card-header {
@@ -41,10 +65,11 @@ body {
 
 #landing {
 	/*background-image: url('../images/landing-small-faded.png');*/
-	background-image: url('../images/landing-faded.png');
+	background-image: url('../images/landing-blurred.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
+	min-height: max(100vh, 500px)
 }
 
 @media (min-width: 576px) {
@@ -54,8 +79,48 @@ body {
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
-#landing {
-	background-position: center bottom;
+	#landing {
+		background-position: center bottom;
+	}
+}
+
+a {
+	/*color: #FFFCF2;*/
+	color: white;
+}
+
+a:hover {
+	color: white;
+	text-decoration: underline !important;
+}
+
+h1:after {
+   background: none repeat scroll 0 0 orange;
+   bottom: -10px;
+   content: "";
+   display: block;
+   height: 5px;
+   position: relative;
+   width: 100px;
+   margin-bottom: 2rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../images/navbar-toggler-icon.svg);
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-brand img {
+	height: 40px;
+}
+
+@media (min-width: 576px) {
+	.navbar-brand img {
+		height: 50px;
+	}
 }
 
 /*
