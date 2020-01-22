@@ -19,6 +19,7 @@ body {
   /*color: #252422;*/
   color: black;
   overscroll-behavior: none;
+  min-width: 340px;
 }
 
 .bf {
@@ -26,6 +27,10 @@ body {
 }
 
 .action-link {
+	color: orange;
+}
+
+.action-link:hover {
 	color: orange;
 }
 
@@ -90,7 +95,7 @@ a {
 }
 
 a:hover {
-	color: white;
+	color: inherit;
 	text-decoration: underline !important;
 }
 
@@ -110,7 +115,7 @@ h1:after {
 }
 
 .navbar-toggler {
-  border-color: white;
+  /*border-color: white;*/
 }
 
 .navbar-brand img {
