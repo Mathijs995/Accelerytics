@@ -1,62 +1,91 @@
 @font-face {
-  font-family: 'Futura medium bt';
-  src: url('../fonts/futura/futura medium bt.ttf') format('truetype');
+  font-family: 'FuturaPTBold';
+  src: url('../fonts/FuturaPTBold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Futura light bt';
-  src: url('../fonts/futura/Futura Light bt.ttf') format('truetype');
+  font-family: 'FuturaPTMedium';
+  src: url('../fonts/FuturaPTMedium.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Futura book font';
-  src: url('../fonts/futura/Futura Book font.ttf') format('truetype');
+  font-family: 'FuturaPTBook';
+  src: url('../fonts/FuturaPTBook.otf') format('opentype');
 }
 
 body {
-  font-family: Futura light bt, Roboto, Lato, sans-serif;
+  font-family: FuturaPTBook, Roboto, Lato, sans-serif;
   font-weight: 400;
-  /*color: #252422;*/
   color: black;
   overscroll-behavior: none;
   min-width: 340px;
 }
 
+* {
+	border-radius: 0 !important;
+}
+
 .bf {
-	font-family: Futura medium bt;
+	font-family: FuturaPTMedium;
 }
 
 .action-link {
-	color: orange;
+	color: orange !important;
 }
 
 .action-link:hover {
-	color: orange;
+	color: orange !important;
 }
 
 .btn-action {
-	/*background-color: #EB5E28;*/
 	background-color: orange;
-	/*color: #FFFCF2;*/
 	color: white;
 }
 
-.bg-dark {
-	/*background-color: #252422;*/
-	background-color: black !important;
-	/*color: #FFFCF2;*/
+.bg-dark .btn-action, .bg-black .btn-action {
+	background-color: inherit !important;
 	color: white !important;
+	border: 2px solid orange;
+}
+
+.bg-black {
+	background-color: black !important;
+	color: white !important;
+	border: 0 !important;
+}
+
+.bg-dark {
+	/*background-color: gray !important;*/
+	/*background-color: #403D39;*/
+	/*background-color: DarkGray !important;*/
+	background-color: black !important;
+	color: black !important;
+	border: 0 !important;
+}
+
+.bg-light {
+	/*background-color: white !important;*/
+	background-color: WhiteSmoke !important;
+	color: black !important;
+	border: 0 !important;
+}
+
+.bg-white .btn-action, .bg-light .btn-action {
+	background-color: inherit !important;
+	color: black;
+	border: 2px solid orange !important;
+}
+
+.bg-white {
+	/*background-color: white !important;*/
+	background-color: white !important;
+	color: black !important;
+	border: 0 !important;
 }
 
 .card-header {
-	/*background-color: #403D39;
-	color: #FFFCF2;*/
 	background-color: inherit;
 	border-top: none;
-}
-
-.card {
-	border: 1px solid #403D39;
 }
 
 .card-footer {
@@ -65,16 +94,15 @@ body {
 }
 
 .blockquote-footer {
-	color: #CCC5B9;
+	color: orange;
 }
 
 #landing {
-	/*background-image: url('../images/landing-small-faded.png');*/
-	background-image: url('../images/landing-blurred.png');
+	background-image: url('../images/landing.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
-	min-height: max(100vh, 500px)
+	min-height: max(calc(100vh - 80px), 500px);
 }
 
 @media (min-width: 576px) {
@@ -89,14 +117,28 @@ body {
 	}
 }
 
-a {
-	/*color: #FFFCF2;*/
+.bg-dark a, .bg-black a {
 	color: white;
 }
 
+.bg-light a, .bg-white a {
+	color: black;
+}
+
+.card a:hover {
+	text-decoration: none;
+}
+
+.nav-link {
+	border: solid 1px black;
+}
+
+.nav-link:hover, .nav-link.active {
+	border-color: orange;
+}
+
 a:hover {
-	color: inherit;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 h1:after {
@@ -104,18 +146,36 @@ h1:after {
    bottom: -10px;
    content: "";
    display: block;
-   height: 5px;
+   height: 4px;
    position: relative;
    width: 100px;
    margin-bottom: 2rem;
 }
 
-.navbar-toggler-icon {
-  background-image: url(../images/navbar-toggler-icon.svg);
+h2:after {
+   background: none repeat scroll 0 0 orange;
+   bottom: -5px;
+   content: "";
+   display: block;
+   height: 3px;
+   position: relative;
+   width: 64px;
+   margin-bottom: 1rem;
 }
 
-.navbar-toggler {
-  /*border-color: white;*/
+h5:after {
+   background: none repeat scroll 0 0 orange;
+   bottom: -5px;
+   content: "";
+   display: block;
+   height: 3px;
+   position: relative;
+   width: 32px;
+   margin-bottom: 1rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../images/navbar-toggler-icon.svg);
 }
 
 .navbar-brand img {
@@ -152,3 +212,25 @@ h1:after {
 	Orange
 	#EB5E28
 */
+
+.card {
+    transition: all .3s;
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.employee-card:hover > .card-body > p {
+	color: orange;
+}
+
+.social-icon {
+	color: black;
+}
+
+.social-icon:hover {
+	color: orange;
+}

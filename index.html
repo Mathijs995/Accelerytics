@@ -1,120 +1,38 @@
 ---
 layout: default
-title: Accelerytics
+title: Accelerytics - Coming Soon
 ---
+
+<div class="container-fluid sticky-top bg-black" style="min-width: 340px">
+	<div class="mx-auto" style="max-width: 1140px">
+		<nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="#body">
+				<img src="assets/images/logo_light.png" alt="Accelerytics logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<span class="ml-auto navbar-text text-lg-right">
+					Contact us via <a class="action-link" href="tel:{{ site.phone | remove: ' '}}">{{ site.phone }}</a><br>
+					or <a href="mailto:{{ site.email }}" class="action-link">{{ site.email }}</a>
+				</span>
+			</div>
+		</nav>
+	</div>
+</div>
+
 <section id="landing" class="d-flex flex-column w-100">
 	
-	{% include header.html %}
-
 	<div class="container flex-grow-1 d-flex flex-column">
-		
+
 		<div class="row flex-grow-1">
-			<!-- <div class="col-8 col-md-6 my-auto">
-				<h1 class="bf">Empowering you to accelerate.</h5>
-				<p class="my-2">We use data, analytics and design to help our clients be the best they can be.</p>
-				<a href="#" class="btn btn-action">Digital Academy</a>
-				<a href="#" class="btn btn-action">Smart Solutions</a>
-			</div> -->
 			<div class="col-8 col-md-6 my-auto">
 				<h1 class="bf">Coming Soon!</h5>
 				<p class="my-2">We're working hard to finish the development of this site. Our target launch date is <span class="font-weight-bold">end of January!</span></p>
-				<p>If you have any questions in the meantime, please contact us at <a class="text-white bf" href="mailto:contact@accelerytics.com">contact@accelerytics.com</a>.</p>
-			</div>
+				<p>If you have any questions in the meantime, please contact us at <a class="bf" href="mailto:contact@accelerytics.com" style="color: black">contact@accelerytics.com</a>.</p>
 			</div>
 		</div>
-
-		<!-- <div class="row flex-grow-1 d-flex flex-column mx-0">
-			<div class="row mx-0 my-auto">
-				<div class="col-10 col-md-4 d-flex my-4 pl-0 pr-2">
-					<div class="card w-100">
-						<div class="card-header">
-							<h5 class="card-title bf mb-0">Digital Academy</h5>
-						</div>
-						<div class="card-body flex-fill">
-							<p class="card-text">Empowering your people with analytical and digital skills through tailor-made programs.</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-action">Find out more</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-10 col-md-4 d-flex my-4 px-2">
-					<div class="card w-100">
-						<div class="card-header">
-							<h5 class="card-title bf mb-0">Smart Solutions</h5>
-						</div>
-						<div class="card-body flex-fill">
-							<p class="card-text">Together we identify your opportunities and deliver data-driven and smart solutions.</p>
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-action">Find out more</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
 	</div>
-	<!-- <div class="container-fluid bg-dark">
-		<div class="row my-3">
-			<div class="col-12">
-				<h2 class="text-center">Our Clients</h2>
-			</div>
-			<div class="col-4">
-				<p class="text-center">Logo 1</p>
-			</div>
-			<div class="col-4">
-				<p class="text-center">Logo 2</p>
-			</div>
-			<div class="col-4">
-				<p class="text-center">Logo 3</p>
-			</div>
-		</div>
-	</div> -->
 </section>
-
-<!-- <section id="team" class="min-vh-100 d-flex flex-column">
-	<div class="container flex-grow-1">
-		<div class="row my-5 justify-content-center">
-			<div class="col-12 my-5">
-				<h2 class="bf">The Team</h2>
-			</div>
-			{% assign sorted-employees = site.employees | sort: 'position' %}
-			{% for employee in sorted-employees %}
-				<div class="col-10 col-md-4 my-4 px-2" style="max-width: 400">
-					<div class="card">
-	  					<img src="assets/images/{{ employee.image }}" class="card-img-top">
-	  					<div class="card-body">
-	    					<h6 class="card-title mb-0 font-weight-bold">{{ employee.name }}</h6>
-	    					<p>{{ employee.position }}</p>
-					  	</div>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="container-fluid bg-dark">
-		<div class="row my-5">
-			<div class="col-12">
-				<blockquote class="blockquote text-center text-white">
-	  				<p class="mb-0">“If you can’t explain it simply, you don’t understand it well enough.”</p>
-	  				<footer class="blockquote-footer"><cite title="Source Title">Albert Einstein</cite></footer>
-				</blockquote>
-			</div>
-		</div>
-	</div>
-</section> -->
-
-<!-- <section id="contact" class="min-vh-100 d-flex flex-column">
-	<div class="containerfluid d-flex flex-column flex-grow-1 justify-content-center">
-		<div class="row flex-grow-1">
-			<div class="d-none d-md-block col-6 my-auto">
-				<img class="img-fluid" src="assets/images/contact.png">
-			</div>
-			<div class="col-10 col-md-6 my-auto">
-				<h2 class="font-weight-bold">Contact us.</h2>
-				<p>contact@accelerytics.com</p>
-				<p>+31 6 48 23 93 16</p>
-			</div>
-		</div>
-	</div>
-</section> -->

@@ -1,0 +1,237 @@
+---
+layout: default
+title: Accelerytics
+---
+
+{% include header.html %}
+
+<section id="landing" class="d-flex flex-column w-100">
+	
+	<div class="container flex-grow-1 d-flex flex-column">
+
+		<div class="row flex-grow-1">
+			<div class="col-8 col-md-6 my-auto">
+				<h1 class="bf">Empowering you to accelerate.</h1>
+				<p class="my-2">We help you identify your opportunities and enable your people to create smart solutions.</p>
+			</div>
+		</div>
+
+		<div class="row d-flex flex-column mx-0 my-5">
+			<div class="row mx-0 my-auto">
+				<div class="col-10 col-md-4 col-lg-3 d-flex my-4 pl-0 pr-2">
+					<a href="#academy">
+						<div class="card w-100 bg-dark">
+							<div class="card-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.25)">
+								<h5 class="card-title bf mb-0">Digital Academy</h5>
+							</div>
+							<div class="card-body flex-fill">
+								<p class="card-text">Empowering your people with analytical and digital skills through tailor-made workshops.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#academy" class="btn btn-action">Find out more</a>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-10 col-md-4 col-lg-3 d-flex my-4 px-2">
+					<a href="#solutions">
+						<div class="card w-100 bg-white">
+							<div class="card-header">
+								<h5 class="card-title bf mb-0">Smart Solutions</h5>
+							</div>
+							<div class="card-body flex-fill">
+								<p class="card-text">Together we identify your opportunities and deliver data-driven and smart solutions.</p>
+							</div>
+							<div class="card-footer">
+								<a href="#solutions" class="btn btn-action">Find out more</a>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="services" class="d-flex flex-column min-vh-100 bg-white">
+	<div class="container d-flex flex-column flex-grow-1">
+		<div class="row flex-grow-1">
+			<div class="col-7 px-5 my-auto">
+				<h2 class="bf">Unlocking Your Potential.<br>Together.</h2>
+				<p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.</p>
+			</div>
+			<div class="col-5 p-0">
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="academy" class="d-flex flex-column bg-light">
+	<div class="container d-flex flex-column flex-grow-1" style="padding-top: 5rem!important; padding-bottom: 5rem!important;">
+		<div class="row flex-grow-1">
+			<div class="d-none d-lg-block col-lg-5 p-0">
+				<img class="img-fluid" src="assets/images/academy.jpg">
+			</div>
+			<div class="col-12 col-lg-7 pl-lg-5">
+				<h2 class="bf">Digital Academy</h2>
+				<p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.</p>
+				
+				<div class="row">
+					{% assign sorted-academies = site.academies | sort: 'position' %}
+					{% for academy in sorted-academies %}
+						<div class="col-6 col-md-3 card p-1" data-toggle="modal" data-target='#modal-{{ academy.url_name }}' style="background-color: inherit; border: none">
+							<img src="http://placehold.jp/400x400.png?text=%20" alt="Placeholder image" class="img-fluid">
+							<p class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">{{ academy.name}}</p>
+						</div>
+
+						<div id="modal-{{ academy.url_name }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						  	<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content bg-white">
+									<div class="modal-body">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="line-height: 0.5">
+											<span aria-hidden="true">&times;</span>
+										</button>
+										<div class="row">
+										  	<div class="col-12 pr-0" style="padding-left: 30px">
+										  		<h2 class="card-title mb-0 bf">{{ academy.name }}</h2>
+										  		<p>{{ academy.content }}</p>
+										  	</div>
+										</div>
+									</div>
+								</div>
+						  	</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="solutions" class="d-flex flex-column bg-white">
+	<div class="container d-flex flex-column flex-grow-1" style="padding-top: 5rem!important; padding-bottom: 5rem!important;">
+		<div class="row flex-grow-1">
+			<div class="col-12 col-lg-7 pr-lg-5">
+				<h2 class="bf">Smart Solutions</h2>
+				<p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.</p>
+			</div>
+			<div class="d-none d-lg-block col-lg-5 p-0">
+				<img class="img-fluid" src="assets/images/consulting.jpg">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-fluid bg-dark">
+	<div class="row py-5">
+		<div class="col-12">
+			<blockquote class="blockquote text-center text-white">
+  				<p class="mb-0">“If you can’t explain it simply, you don’t understand it well enough.”</p>
+  				<footer class="blockquote-footer"><cite title="Source Title">Albert Einstein</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+</section>
+
+<section id="team" class="d-flex flex-column bg-white">
+	<div class="container flex-grow-1">
+		<div class="my-5">
+			<h2 class="bf">Our Team</h2>
+		</div>
+		<div class="row my-5 justify-content-center">
+			{% assign sorted-employees = site.employees | sort: 'position' %}
+			{% for employee in sorted-employees %}
+				<div class="col-10 col-md-4 my-4 px-2 d-flex" data-toggle="modal" data-target='#modal-{{ employee.url_name }}' style="max-width: 400">
+					<div class="card employee-card" style="border-radius: 0">
+	  					<img src="assets/images/{{ employee.image }}" class="card-img-top" style="border-radius: 0">
+	  					<div class="card-body flex-fill">
+	  						<div class="row">
+	  							<div class="col">
+	  								<h6 class="card-title mb-0 bf">{{ employee.name }}</h6>
+	    							<p class="mb-0">{{ employee.position }}</p>
+	  							</div>
+	  							<div class="col-auto text-right">
+	  								<a title="LinkedIn" href="{{ employee.linkedin }}" target="_blank"><i class="fab fa-linkedin-in social-icon ml-1"></i></a>
+	  								{% if employee.github %}
+  										<a title="Github" href="{{ employee.github }}" target="_blank"><i class="fab fa-github social-icon ml-1"></i></a>
+									{% endif %}
+	  							</div>
+	  						</div>
+					  	</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	{% for employee in site.employees %}
+		<div id="modal-{{ employee.url_name }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="line-height: 0.5">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<div class="row">
+							<div class="col-6 px-0 justify-content-center">
+								<img src="assets/images/{{ employee.image }}" class="img-fluid">
+						  	</div>
+						  	<div class="col-6 pr-0" style="padding-left: 30px">
+						  		<h2 class="card-title mb-0 bf">{{ employee.name }}</h2>
+		    					<p class="mb-0">{{ employee.position }}</p>
+						  		<p>{{ employee.content }}</p>
+						  	</div>
+						</div>
+					</div>
+				</div>
+		  	</div>
+		</div>
+	{% endfor %}
+</section>
+<section class="container-fluid bg-dark">
+	<div class="row py-5">
+		<div class="col-12">
+			<blockquote class="blockquote text-center text-white">
+  				<p class="mb-0">“If you can’t explain it simply, you don’t understand it well enough.”</p>
+  				<footer class="blockquote-footer"><cite title="Source Title">Albert Einstein</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+</section>
+
+<section id="contact" class="bg-white">
+	<div class="container-fluid d-flex flex-column flex-grow-1">
+		<div class="row flex-grow-1">
+			<div class="col-6 p-0">
+				<img class="img-fluid" src="assets/images/contact.png">
+			</div>
+			<div class="col-6 my-auto px-5">
+				<h2 class="bf">Contact us.</h2>
+				<a href="tel:{{ site.phone | remove: ' '}}">{{ site.phone }}</a><br>
+				<a href="mailto:contact@accelerytics.com">{{ site.email }}</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <footer class="container-fluid bg-dark py-2 text-center" style="font-size: 12px">
+	<p class="mb-0">© {{ 'now' | date: "%Y" }} Accelerytics</p>
+</footer> -->
+
+<!-- <footer class="container-fluid bg-dark py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="media-body" style="font-size: 14px">
+					<h5 class="mt-0" style="font-size: 16px">Contact</h5>
+					<a href="tel:+31648239316">+31 6 482 393 16</a><br>
+					<i class="far fa-envelope mr-1"></i><a href="mailto:contact@accelerytics.com">contact@accelerytics.com</a>
+				</div>
+			</div>
+			<div class="col text-right mt-auto" style="font-size: 12px">
+				<p class="mb-0">© {{ 'now' | date: "%Y" }} Accelerytics</p>
+			</div>
+		</div>
+	</div>
+</footer> -->

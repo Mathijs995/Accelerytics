@@ -1,3 +1,13 @@
+title: "Accelerytics"
+email: "contact@accelerytics.com"
+description:
+  "Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description."
+baseurl: ""
+url: "https://accelerytics.com"
+phone: "+31 6 483 051 00"
+
 collections:
   - workshops
   - academies
