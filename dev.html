@@ -129,7 +129,7 @@ title: Accelerytics
 			<h2 class="bf">Our Team</h2>
 		</div>
 		<div class="row my-5">
-			{% assign sorted-employees = site.employees | sort: 'position' %}
+			{% assign sorted-employees = site.employees | sort: 'index' %}
 			{% for employee in sorted-employees %}
 				<div class="col-10 col-md-4 my-4 px-2 d-flex" data-toggle="modal" data-target='#modal-{{ employee.url_name }}' style="max-width: 400">
 					<div class="card employee-card" style="border-radius: 0">
@@ -190,11 +190,11 @@ title: Accelerytics
 	</div>
 </section> -->
 
-<section id="contact" class="bg-light">
-	<div class="container-fluid d-flex flex-column flex-grow-1">
+<section id="contact" class="bg-light full-h d-flex flex-column">
+	<div class="container-fluid flex-grow-1 d-flex flex-column">
 		<div class="row flex-grow-1">
-			<div class="col-6 p-0">
-				<img class="img-fluid" src="assets/images/contact.png">
+			<div class="col-6 p-0 overflow-hidden justify-content-center">
+				<img src="assets/images/mathijs2.jpg" style="max-height: calc(100vh - 80px); transform: translate();">
 			</div>
 			<div class="col-6 my-auto px-5">
 				<h2 class="bf">Contact us.</h2>

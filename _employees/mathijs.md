@@ -1,5 +1,6 @@
 ---
 name: Mathijs de Jong
+index: 2
 url_name: mathijs
 position: Co-founder
 image: mathijs.jpeg

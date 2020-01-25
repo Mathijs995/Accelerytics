@@ -1,5 +1,6 @@
 ---
 name: Yassin D. Kajjou
+index: 1
 url_name: yassin
 position: Co-founder
 image: yassin.png
