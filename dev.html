@@ -128,7 +128,7 @@ title: Accelerytics
 		<div class="my-5">
 			<h2 class="bf">Our Team</h2>
 		</div>
-		<div class="row my-5 justify-content-center">
+		<div class="row my-5">
 			{% assign sorted-employees = site.employees | sort: 'position' %}
 			{% for employee in sorted-employees %}
 				<div class="col-10 col-md-4 my-4 px-2 d-flex" data-toggle="modal" data-target='#modal-{{ employee.url_name }}' style="max-width: 400">
