@@ -3,7 +3,7 @@ $("a").click(function(e) {
 	if (typeof aid !== "undefined") {
 		if (aid[0] === '#') {
 			e.preventDefault();
-			$('html,body').animate({scrollTop: $(aid).offset().top - 80}, 'slow');
+			$('html,body').animate({scrollTop: $(aid).offset().top - 80 + 1}, 'slow');
 		}
 	}
 });
