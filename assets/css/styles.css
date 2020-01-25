@@ -97,12 +97,15 @@ body {
 	color: orange;
 }
 
+.full-h {
+	min-height: max(calc(100vh - 80px), 500px);
+}
+
 #landing {
 	background-image: url('../images/landing.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
-	min-height: max(calc(100vh - 80px), 500px);
 }
 
 @media (min-width: 576px) {
