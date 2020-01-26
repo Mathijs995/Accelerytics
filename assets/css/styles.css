@@ -167,7 +167,7 @@ h2:after {
    height: 3px;
    position: relative;
    width: 64px;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
 }
 
 h5:after {
@@ -226,7 +226,7 @@ h5:after {
 }
 
 .card:hover {
-    transform: scale(1.025);
+    transform: scale(1.05);
     cursor: pointer;
 }
 

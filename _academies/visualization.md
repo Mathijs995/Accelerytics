@@ -2,7 +2,7 @@
 name: Data visualization
 url_name: visualization
 position: 2
-tools: [Power BI, Python, R]
+tools: [technologies, [Power BI, Python, R]]
 duration: 3 hours
 students: 5 - 30
 level: All
