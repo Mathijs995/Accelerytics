@@ -13,40 +13,37 @@ title: Accelerytics
 			<div class="col-8 col-md-6 my-auto">
 				<h1 class="bf">Empowering you to accelerate.</h1>
 				<p class="my-2">We help you identify your opportunities and enable your people to create smart solutions.</p>
-			</div>
-		</div>
-
-		<div class="row d-flex flex-column mx-0 my-5">
-			<div class="row mx-0 my-auto">
-				<div class="col-10 col-md-4 col-lg-3 d-flex my-4 pl-0 pr-2">
-					<a href="#academy">
-						<div class="card w-100 bg-dark">
-							<div class="card-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.25)">
-								<h5 class="card-title bf mb-0">Digital Academy</h5>
+				<div class="row">
+					<div class="col-6 my-4">
+						<a href="#academy">
+							<div class="card w-100 bg-dark">
+								<div class="card-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.25)">
+									<h5 class="card-title bf mb-0">Digital Academy</h5>
+								</div>
+								<div class="card-body flex-fill">
+									<p class="card-text">Empowering your people with analytical and digital skills through tailor-made workshops.</p>
+								</div>
+								<div class="card-footer">
+									<a href="#academy" class="btn btn-action">Find out more</a>
+								</div>
 							</div>
-							<div class="card-body flex-fill">
-								<p class="card-text">Empowering your people with analytical and digital skills through tailor-made workshops.</p>
+						</a>
+					</div>
+					<div class="col-6 my-auto">
+						<a href="#solutions">
+							<div class="card w-100 bg-white">
+								<div class="card-header">
+									<h5 class="card-title bf mb-0">Smart Solutions</h5>
+								</div>
+								<div class="card-body flex-fill">
+									<p class="card-text">Together we identify your opportunities and deliver data-driven and smart solutions.</p>
+								</div>
+								<div class="card-footer">
+									<a href="#solutions" class="btn btn-action">Find out more</a>
+								</div>
 							</div>
-							<div class="card-footer">
-								<a href="#academy" class="btn btn-action">Find out more</a>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-10 col-md-4 col-lg-3 d-flex my-4 px-2">
-					<a href="#solutions">
-						<div class="card w-100 bg-white">
-							<div class="card-header">
-								<h5 class="card-title bf mb-0">Smart Solutions</h5>
-							</div>
-							<div class="card-body flex-fill">
-								<p class="card-text">Together we identify your opportunities and deliver data-driven and smart solutions.</p>
-							</div>
-							<div class="card-footer">
-								<a href="#solutions" class="btn btn-action">Find out more</a>
-							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -82,7 +79,7 @@ title: Accelerytics
 					{% for academy in sorted-academies %}
 						<div class="col-6 col-md-3 card p-1" data-toggle="modal" data-target='#modal-{{ academy.url_name }}' style="background-color: inherit; border: none">
 							<img src="http://placehold.jp/400x400.png?text=%20" alt="Placeholder image" class="img-fluid">
-							<p class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">{{ academy.name}}</p>
+							<p class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">{{ academy.name }}</p>
 						</div>
 
 						<div id="modal-{{ academy.url_name }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -92,12 +89,7 @@ title: Accelerytics
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="line-height: 0.5">
 											<span aria-hidden="true">&times;</span>
 										</button>
-										<div class="row">
-										  	<div class="col-12 pr-0" style="padding-left: 30px">
-										  		<h2 class="card-title mb-0 bf">{{ academy.name }}</h2>
-										  		<p>{{ academy.content }}</p>
-										  	</div>
-										</div>
+										{% include academy.html academy=academy %}
 									</div>
 								</div>
 						  	</div>
@@ -162,16 +154,7 @@ title: Accelerytics
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="line-height: 0.5">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<div class="row">
-							<div class="col-6 px-0 justify-content-center">
-								<img src="assets/images/{{ employee.image }}" class="img-fluid">
-						  	</div>
-						  	<div class="col-6 pr-0" style="padding-left: 30px">
-						  		<h2 class="card-title mb-0 bf">{{ employee.name }}</h2>
-		    					<p class="mb-0">{{ employee.position }}</p>
-						  		<p>{{ employee.content }}</p>
-						  	</div>
-						</div>
+						{% include employee.html employee=employee %}
 					</div>
 				</div>
 		  	</div>

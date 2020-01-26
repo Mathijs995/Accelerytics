@@ -1,0 +1,85 @@
+<div class="row">
+	<div class="col-12 pr-0 mb-3">
+		<h2 class="card-title bf">{{ academy.name }}</h2>
+	</div>
+	{% if academy.objectives %}
+		<div class="col-8">
+			{{ academy.content }}
+		</div>
+		
+	
+		<div class="col-4">
+			<div class="row">
+				<!-- <div class="col-12 mb-2 p-2 media" style="background-color: darkgray"> -->
+				<div class="col-12 mb-2 p-2 media" style="border: 1px solid orange">
+					<img src="http://placehold.jp/40x40.png?text=1" alt="Placeholder image" class="align-self-center mr-3">
+					<div class="media-body" style="line-height: 1.25">
+						<p class="mb-0 bf" style="font-size: 14px">{{ academy.objectives[0][0] }}</p>
+						<p class="mb-0" style="font-size: 12px">{{ academy.objectives[0][1] }}</p>
+					</div>
+				</div>
+				<!-- <div class="col-12 mb-2 p-2 media" style="background-color: lightgray"> -->
+				<div class="col-12 mb-2 p-2 media" style="border: 1px solid orange">
+					<img src="http://placehold.jp/40x40.png?text=2" alt="Placeholder image" class="align-self-center mr-3">
+					<div class="media-body" style="line-height: 1.25">
+						<p class="mb-0 bf" style="font-size: 14px">{{ academy.objectives[1][0] }}</p>
+						<p class="mb-0" style="font-size: 12px">{{ academy.objectives[1][1] }}</p>
+					</div>
+				</div>
+				<!-- <div class="col-12 mb-2 p-2 media" style="background-color: orange"> -->
+				<div class="col-12 mb-2 p-2 media" style="border: 1px solid orange">
+					<img src="http://placehold.jp/40x40.png?text=3" alt="Placeholder image" class="align-self-center mr-3">
+					<div class="media-body" style="line-height: 1.25">
+						<p class="mb-0 bf" style="font-size: 14px">{{ academy.objectives[2][0] }}</p>
+						<p class="mb-0" style="font-size: 12px">{{ academy.objectives[2][1] }}</p>
+					</div>
+				</div>
+			<div class="col-12 mt-3">
+				<div class="row">
+					{% if academy.duration %}
+						<div class="col-4 justify-content-center p-0">
+							<p class="text-center mb-0" style="font-size: 24px"><i class="far fa-clock"></i></p>
+							<p class="text-center" style="font-size: 12px">{{ academy.duration }}</p>
+						</div>
+					{% endif %}
+					{% if academy.date %}
+						<div class="col-4 justify-content-center p-0">
+							<p class="text-center mb-0" style="font-size: 24px"><i class="far fa-calendar-alt"></i></p>
+							<p class="text-center" style="font-size: 12px">{{ academy.date }}</p>
+						</div>
+					{% endif %}
+					{% if academy.location %}
+						<div class="col-4 justify-content-center p-0">
+							<p class="text-center mb-0" style="font-size: 24px"><i class="fas fa-map-marker-alt"></i></p>
+							<p class="text-center" style="font-size: 12px">{{ academy.location }}</p>
+						</div>
+					{% endif %}
+					{% if academy.students %}
+						<div class="col-4 justify-content-center p-0">
+							<p class="text-center mb-0" style="font-size: 24px"><i class="fas fa-users"></i></p>
+							<p class="text-center" style="font-size: 12px">{{ academy.students }}</p>
+						</div>
+					{% endif %}
+					{% if academy.level %}
+						<div class="col-4 justify-content-center p-0">
+							<p class="text-center mb-0" style="font-size: 24px"><i class="fas fa-user-graduate"></i></p>
+							<p class="text-center" style="font-size: 12px">{{ academy.level }}</p>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% if academy.tools %}
+			<div class="row">
+				<div class="col p-0">
+					<p><span class="bf">Technologies:</span> {{ academy.tools | array_to_sentence_string: "or" }}</p>
+				</div>
+			</div>
+		{% endif %}
+		</div>
+	{% else %}
+		<div class="col-12">
+			{{ academy.content }}
+		</div>
+	{% endif %}	
+</div>
