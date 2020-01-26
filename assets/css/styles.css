@@ -102,21 +102,25 @@ body {
 }
 
 #landing {
-	background-image: url('../images/landing.png');
+	background-image: url('../images/landing-blurred.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right center;
+	/*background-position: left top;
+	background-image: url('../images/academy2.jpg');*/
 }
 
 @media (min-width: 576px) {
 	#landing {
 		background-position: center center;
+		/*background-position: left top;*/
 	}
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
 	#landing {
 		background-position: center bottom;
+		/*background-position: left top;*/
 	}
 }
 
