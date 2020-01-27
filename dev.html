@@ -24,7 +24,7 @@ title: Accelerytics
 									<p class="card-text">Empowering your people with analytical and digital skills through tailor-made workshops.</p>
 								</div>
 								<div class="card-footer">
-									<a href="#academy" class="btn btn-action">Find out more</a>
+									<a href="#academy" class="btn btn-action">Find out more &#9662;</a>
 								</div>
 							</div>
 						</a>
@@ -39,7 +39,7 @@ title: Accelerytics
 									<p class="card-text">Together we identify your opportunities and deliver data-driven and smart solutions.</p>
 								</div>
 								<div class="card-footer">
-									<a href="#solutions" class="btn btn-action">Find out more</a>
+									<a href="#solutions" class="btn btn-action">Find out more &#9662;</a>
 								</div>
 							</div>
 						</a>
@@ -126,6 +126,7 @@ title: Accelerytics
 				<div class="col-10 col-md-4 my-4 px-2 d-flex" data-toggle="modal" data-target='#modal-{{ employee.url_name }}' style="max-width: 400">
 					<div class="card employee-card" style="border-radius: 0">
 	  					<img src="assets/images/people/{{ employee.image }}" class="card-img-top" style="border-radius: 0">
+	  					<!-- <p class="text-center" style="position: absolute; top: 0%; left: 100%; transform: translate(-100%, 0%); color: orange"><i class="fas fa-external-link-alt p-2"></i></p> -->
 	  					<div class="card-body flex-fill">
 	  						<div class="row">
 	  							<div class="col">
@@ -133,9 +134,12 @@ title: Accelerytics
 	    							<p class="mb-0">{{ employee.position }}</p>
 	  							</div>
 	  							<div class="col-auto text-right">
-	  								<a title="LinkedIn" href="{{ employee.linkedin }}" target="_blank"><i class="fab fa-linkedin-in social-icon ml-1"></i></a>
+	  								{% if employee.homepage %}
+  										<a title="Homepage {{ employee.name }}" href="{{ employee.homepage }}" target="_blank"><i class="fas fa-home social-icon ml-1"></i></a>
+									{% endif %}
+	  								<a title="LinkedIn {{ employee.name }}" href="{{ employee.linkedin }}" target="_blank"><i class="fab fa-linkedin-in social-icon ml-1"></i></a>
 	  								{% if employee.github %}
-  										<a title="Github" href="{{ employee.github }}" target="_blank"><i class="fab fa-github social-icon ml-1"></i></a>
+  										<a title="Github {{ employee.name }}" href="{{ employee.github }}" target="_blank"><i class="fab fa-github social-icon ml-1"></i></a>
 									{% endif %}
 	  							</div>
 	  						</div>
@@ -177,7 +181,7 @@ title: Accelerytics
 	<div class="container-fluid flex-grow-1 d-flex flex-column">
 		<div class="row flex-grow-1">
 			<div class="col-6 p-0 overflow-hidden justify-content-center">
-				<img src="assets/images/mathijs2.jpg" style="max-height: calc(100vh - 80px); transform: translate();">
+				<img src="assets/images/mathijs2.jpg">
 			</div>
 			<div class="col-6 my-auto px-5">
 				<h2 class="bf">Contact us.</h2>
