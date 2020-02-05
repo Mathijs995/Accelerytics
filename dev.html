@@ -18,7 +18,7 @@ title: Accelerytics
 						<a href="#academy">
 							<div class="card w-100 bg-dark">
 								<div class="card-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.25)">
-									<h5 class="card-title bf mb-0">Digital Academy</h5>
+									<h5 class="card-title bf mb-0">Acceleration Academy</h5>
 								</div>
 								<div class="card-body flex-fill">
 									<p class="card-text">Empowering your people with analytical and digital skills through tailor-made workshops.</p>
@@ -71,13 +71,13 @@ title: Accelerytics
 				<img class="img-fluid" src="assets/images/academy.jpg">
 			</div>
 			<div class="col-12 col-lg-7 pl-lg-5">
-				<h2 class="bf">Digital Academy</h2>
+				<h2 class="bf">Acceleration Academy</h2>
 				<p>Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.</p>
 				
 				<div class="row">
 					{% assign sorted-academies = site.academies | sort: 'position' %}
 					{% for academy in sorted-academies %}
-						<div class="col-6 col-md-3 card p-1" data-toggle="modal" data-target='#modal-{{ academy.url_name }}' style="background-color: inherit; border: none">
+						<div class="col-6 col-md-3 card p-1 academy-card" data-toggle="modal" data-target='#modal-{{ academy.url_name }}' style="background-color: inherit; border: none">
 							<img src="http://placehold.jp/400x400.png?text=%20" alt="Placeholder image" class="img-fluid">
 							<p class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">{{ academy.name }}</p>
 						</div>

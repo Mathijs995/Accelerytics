@@ -3,8 +3,19 @@
 		<img src="assets/images/People/{{ employee.image }}" class="img-fluid">
   	</div>
   	<div class="col-6 pr-0" style="padding-left: 30px">
-  		<h2 class="card-title mb-0 bf">{{ employee.name }}</h2>
-		<p class="mb-0">{{ employee.position }}</p>
-  		<p>{{ employee.content }}</p>
+  		<h3 class="card-title mb-0 bf">{{ employee.name }}</h3>
+		<p class="mb-2">{{ employee.position }}</p>
+  		{{ employee.content }}
+  		<div class="row">
+  			<div class="col text-right">
+				{% if employee.homepage %}
+					<a title="Homepage {{ employee.name }}" href="{{ employee.homepage }}" target="_blank"><i class="fas fa-home social-icon ml-1"></i></a>
+			{% endif %}
+				<a title="LinkedIn {{ employee.name }}" href="{{ employee.linkedin }}" target="_blank"><i class="fab fa-linkedin-in social-icon ml-1"></i></a>
+				{% if employee.github %}
+					<a title="Github {{ employee.name }}" href="{{ employee.github }}" target="_blank"><i class="fab fa-github social-icon ml-1"></i></a>
+			{% endif %}
+			</div>
+  		</div>
   	</div>
 </div>

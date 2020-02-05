@@ -230,8 +230,12 @@ h5:after {
     cursor: pointer;
 }
 
-.employee-card:hover > .card-body > p {
+.employee-card:hover .card-title {
 	color: orange;
+}
+
+.academy-card:hover p {
+	font-family: FuturaPTMedium;
 }
 
 .social-icon {
