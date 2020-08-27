@@ -6,7 +6,7 @@ tools: [languagues, [Python, R]]
 duration: 3 hours
 students: 5 - 30
 level: All
-objectives: [["Economics of Analytics", "Gain insights about the possibilities of leveraging data analytics"], ["Analytics & Visualization", "Learn how to visualize data and deploy machine learning models"], ["Advanced Data Analytics", "Deep-dive into the most important advanced data analytics techniques"]]
+objectives: [["Economics of Analytics", "Understand under what conditions data analytics can be levered"], ["Analytics & Visualization", "Learn how to visualize data and deploy machine learning models"], ["Advanced Data Analytics", "Deep-dive into the most important advanced data analytics techniques"]]
 ---
 In an era of increasing data availability and complexity, analytics is becoming more prominent in all sectors. Analytics uses data, technology and advanced quantitative analysis to drive more accurate observations and insights. In other words, the use of knowledge to replace speculation in the decision-making process. Analytics can help provide executives with better answers to important questions in order to be able to make better strategic decisions.
 
